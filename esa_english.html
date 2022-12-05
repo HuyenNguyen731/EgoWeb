@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESA English</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      /* common */
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      section {
+        margin: 4rem 0;
+      }
+
+      .header {
+        font-size: 18px;
+      }
+
+      .header h1 {
+        font-size: 98px;
+      }
+
+      .header .title {
+        margin-bottom: 2rem;
+      }
+
+      /* main */
+      .section-two {
+        gap: 24px;
+        display: grid;
+        font-size: 18px;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .section-two .item-1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .section-two .item-2 {
+        grid-column-start: 6;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-bottom: 2rem;
+      }
+
+      .section-two .item-3 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+
+      .section-two .item-4 {
+        grid-column-start: 6;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 5;
+      }
+
+      .img-section-two {
+        margin-top: 2rem;
+      }
+
+      .section-three .text {
+        font-size: 18px;
+        max-width: 70%;
+        margin: 0 5rem 2rem auto;
+      }
+
+      .section-four {
+        font-size: 18px;
+      }
+
+      .section-five > div:nth-child(2) {
+        padding: 50px 120px;
+      }
+
+      .section-five > div:nth-child(2) .col-6 {
+        padding: 20px 30px;
+      }
+
+      @media screen and (max-width: 768px) {
+        /* common */
+        section {
+          margin: 3rem 0;
+        }
+
+        .header {
+          font-size: 12px;
+        }
+
+        .header h1 {
+          font-size: 30px;
+          margin: 0 0 3rem 0;
+        }
+
+        .header .title {
+          font-size: 18px;
+        }
+
+        /* main */
+        .section-two {
+          gap: 16px;
+          display: grid;
+          font-size: 12px;
+          grid-template-rows: repeat(4, auto);
+          grid-template-columns: repeat(12, 1fr);
+        }
+
+        .section-two .item-1 {
+          grid-column-start: 1;
+          grid-column-end: 6;
+          grid-row-start: 2;
+          grid-row-end: 4;
+        }
+
+        .section-two .item-2 {
+          grid-column-start: 1;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          margin-bottom: 1rem;
+        }
+
+        .section-two .item-3 {
+          grid-column-start: 1;
+          grid-column-end: 13;
+          grid-row-start: 4;
+          grid-row-end: 5;
+          margin-top: 1rem;
+        }
+
+        .section-two .item-4 {
+          grid-column-start: 6;
+          grid-row-start: 2;
+          grid-row-end: 4;
+          margin-top: 3rem;
+        }
+
+        .section-three .text,
+        .section-four .text {
+          display: none !important;
+        }
+
+        .section-four .col-6 img {
+          height: 100%;
+        }
+
+        .section-five {
+          flex-direction: column-reverse !important;
+        }
+
+        .section-five > div:nth-child(1) {
+          padding: 0 20px;
+          gap: 1rem !important;
+        }
+
+        .section-five > div:nth-child(2) {
+          padding: 0 20px;
+        }
+
+        .section-five > div:nth-child(2) .col-6 {
+          padding: 8px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="esa-english">
+      <section class="header">
+        <div class="max-width">
+          <div class="row">
+            <div class="col-lg-5 col-md-12 col-12"></div>
+            <div class="col-lg-7 col-md-12 col-12">
+              <h1>ESA ENGLISH</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-12 col-12">
+              <div class="row">
+                <div class="col-lg-12 col-md-6 col-6">
+                  <div class="title">SERVICES</div>
+                </div>
+                <div class="col-lg-12 col-md-6 col-6">
+                  <div class="desc">
+                    <p>Branding</p>
+                    <p>Campain</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-12 col-12">
+              <div class="row">
+                <div class="col-lg-12 col-md-6 col-6">
+                  <div class="title">DESCRIPTION</div>
+                </div>
+                <div class="col-lg-12 col-md-6 col-6">
+                  <div class="desc">
+                    <p>
+                      Esa English with the orientation to become a professional
+                      ielts-toeic exam preparation system for Vietnamese
+                      students. With the new learning model, student approach.
+                      Customers want to bring a new look and stand out from the
+                      current domestic English education market. And we bring
+                      visual solutions for branding guidelines for brands
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <img src="./EgoImages/esa/banner_1.png" alt="" />
+      </section>
+
+      <section>
+        <div class="max-width">
+          <div class="section-two">
+            <div class="item-1">
+              <img src="./EgoImages/esa/a1.png" alt="" />
+            </div>
+            <div class="item-2">
+              Our challenge was to come up with a visual strategy - similar
+              colors strongly represent a youthful, modern and easy to
+              understand style. This message is comprehensively expressed
+              through logo, slogan, office suite, company profile, course
+              brochure, center image.
+            </div>
+            <div class="item-3">
+              We took care to make all the information clear and easy to read
+              while making the illustrations stand out - concise - modern.
+            </div>
+            <div class="item-4">
+              <img src="./EgoImages/esa/a2.png" alt="" />
+            </div>
+          </div>
+          <div class="img-section-two">
+            <img src="./EgoImages/esa/a3.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-three">
+          <div class="text">
+            The interesting part of the project also lies in the articles about
+            the brand on the facebook platform. We have a campain that opens
+            with the message "jump of a lifetime".
+          </div>
+          <img src="./EgoImages/esa/banner_2.png" alt="" />
+        </div>
+      </section>
+
+      <section class="max-width">
+        <div class="section-four">
+          <div class="row">
+            <div class="col-6">
+              <img src="./EgoImages/esa/landing1.png" alt="" />
+            </div>
+            <div class="col-6 text d-flex align-items-center">
+              We have 3 courses corresponding to 3 files of customers of
+              different age ranges. This campin focuses on introducing the
+              course to all three of these subjects.
+            </div>
+            <div class="col-6 text d-flex align-items-center">
+              With the messages centered on the insilde of each object, we
+              deploy a set of images for each object.
+            </div>
+            <div class="col-6">
+              <img src="./EgoImages/esa/landing2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-width">
+          <img src="./EgoImages/esa/landing3.png" alt="" />
+        </div>
+      </section>
+
+      <section>
+        <div class="section-five d-flex flex-column gap-5">
+          <div class="d-flex gap-5">
+            <div>
+              <img src="./EgoImages/esa/b1.png" alt="" />
+            </div>
+            <div>
+              <img src="./EgoImages/esa/b2.png" alt="" />
+            </div>
+            <div>
+              <img src="./EgoImages/esa/b3.png" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <div class="row">
+              <div class="col-6">
+                <img src="./EgoImages/esa/t1.png" alt="" />
+              </div>
+              <div class="col-6">
+                <img src="./EgoImages/esa/t2.png" alt="" />
+              </div>
+              <div class="col-6">
+                <img src="./EgoImages/esa/t3.png" alt="" />
+              </div>
+              <div class="col-6">
+                <img src="./EgoImages/esa/t4.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
