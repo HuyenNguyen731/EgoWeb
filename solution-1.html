@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi paint 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="slider.css" />
+
+    <style>
+      .section-banner {
+        height: 850px;
+      }
+
+      .section-banner img {
+        object-fit: cover;
+      }
+
+      .video-wrapper {
+        margin: 100px 20px;
+      }
+
+      video {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .section-implement .step {
+        display: flex;
+        padding: 50px 20px;
+      }
+
+      .section-implement .card-step {
+        padding: 0 30px;
+        flex: 1;
+      }
+
+      .card-step img {
+        width: 100%;
+      }
+
+      .image-ideal {
+        max-width: 200px;
+        width: 100%;
+        margin: 0 0 0 auto;
+      }
+
+      .image-ideal2 {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 0 0 auto;
+      }
+
+      .image-ideal3 {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 0 0 auto;
+      }
+
+      .section-implement .step .card-step:nth-child(2) {
+        border: 1px solid;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      .section-implement .step {
+        position: relative;
+        top: 360px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 10px -1px;
+      }
+
+      .section-implement .title {
+        position: absolute;
+        top: 100px;
+      }
+
+      .sectioc-idea {
+        padding: 500px 0 80px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        .section-banner {
+          height: 500px;
+        }
+
+        .video-wrapper {
+          margin: 40px 0px;
+        }
+
+        video {
+          height: 280px;
+          border-radius: 8px;
+        }
+
+        .section-implement .step {
+          flex-direction: column;
+        }
+
+        .section-implement .step .card-step:nth-child(2) {
+          border: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solution-1">
+      <section class="section-banner">
+        <img class="w-100 h-100" src="./EgoImages/solution-1/banner-1.png" />
+      </section>
+
+      <section class="section-video">
+        <div class="max-width">
+          <div class="video-wrapper">
+            <video width="100%" height="100%" controls>
+              <source src="movie.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <p class="font-64 fw-bolder">
+                Giải pháp này chắc chắn phù hợp với bạn nếu:
+              </p>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="d-flex align-items-center gap-4">
+                <p class="font-120 primary-color">01</p>
+                <p>Bạn mới khởi sự kinh doanh và ngân sách , nhân lực có hạn</p>
+              </div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="font-120 primary-color">02</p>
+                <p>
+                  Bối rối khi phân bổ đầu tư nguồn lực vào các mục tiêu Lựa chọn
+                  bắt đầu với Xây dựng thương hiệu hay Marketing? Tập trung làm
+                  điều gì trước, điều gì sau? Trong bao lâu?
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="font-120 primary-color">03</p>
+                <p>
+                  Mù mờ về setup kênh bán trên digital. Tạo ra doanh thu trên
+                  digital
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="font-120 primary-color">04</p>
+                <p>
+                  Mù mờ về setup kênh bán trên digital. Tạo ra doanh thu trên
+                  digital
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-width py-5">
+        <div class="bg-white color-black p-5 fs-5">
+          <div class="row mb-4">
+            <div class="col-lg-7 col-12">
+              <p class="font-64 fw-bolder mb-5">
+                EASY GO giải quyết giúp bạn 5 bài toán
+              </p>
+            </div>
+          </div>
+          <div class="row gx-5 text-center">
+            <div class="col-lg-4 col-12">
+              <p class="mb-1">Phân bổ nguồn lực ban đầu tối ưu & hiệu quả</p>
+              <p>
+                Tối ưu nhân lực Tiết kiệm thời gian Ngân sách phân bổ hiệu quả
+              </p>
+            </div>
+            <div class="col-lg-4 col-12">
+              <p>Thẩm mỹ thương hiệu</p>
+            </div>
+            <div class="col-lg-4 col-12">
+              <p>
+                Đồng hành thức thi chiến lược & kết nội với mục tiêu doanh số
+              </p>
+            </div>
+          </div>
+
+          <div class="row gx-5 text-center mt-5">
+            <div class="col-lg-2 col-12"></div>
+            <div class="col-lg-4 col-12">
+              <p>
+                Xây dựng các kênh truyền thông sở hữu & chiến lược phát triển
+                trên từng kênh
+              </p>
+            </div>
+            <div class="col-lg-4 col-12">
+              <p>
+                Xác định tài sản số của doanh nghiệp và chiến lược gia tăng tài
+                sản số từ những ngày đầu khởi sự kinh doanh
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="w-100" src="./EgoImages/solution-1/artboard.png" />
+      </section>
+
+      <section class="section-implement max-width relative">
+        <div class="font-64 my-5 title">Bằng 3 bước triển khai chi tiết</div>
+        <div class="bg-white step">
+          <div class="card-step color-black">
+            <div class="font-120 primary-color">01</div>
+            <p class="font-32">Hoàn thiện sản phẩm/dịch vụ</p>
+            <div class="">
+              <p class="mb-1">Xác định lợi thế cạnh tranh</p>
+              <p class="mb-1">Xác định nhu cầu khách hàng</p>
+              <p class="mb-1">Xác định định vị</p>
+              <p class="mb-1">Mục tiêu kinh doanh</p>
+            </div>
+            <div class="image-ideal">
+              <img src="./EgoImages/solution-1/ideal.png" />
+            </div>
+          </div>
+
+          <div class="card-step color-black">
+            <div class="font-120 primary-color">02</div>
+            <p class="font-32">Định hình thương hiệu</p>
+            <div class="">
+              <p class="mb-1">Logo</p>
+              <p class="mb-1">Visual identity</p>
+              <p class="mb-1">Brand guideline</p>
+              <p class="mb-1">Brand concept</p>
+            </div>
+            <div class="image-ideal2">
+              <img src="./EgoImages/solution-1/ideal2.png" />
+            </div>
+          </div>
+
+          <div class="card-step color-black">
+            <div class="font-120 primary-color">03</div>
+            <p class="font-32">Chiến lược Marketing & thực thi</p>
+
+            <div class="">
+              <p class="mb-1">Owned Media : Facebook</p>
+              <p class="mb-1">Instagram</p>
+              <p class="mb-1">Tiktok</p>
+              <p class="mb-1">Landingpage</p>
+            </div>
+            <div class="image-ideal3">
+              <img src="./EgoImages/solution-1/ideal3.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white sectioc-idea">
+        <div class="max-width">
+          <div class="font-64 mb-5 color-black">
+            Những dự án tâm huyết & Sáng tạo
+          </div>
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <img class="w-100" src="./EgoImages/spa/a1.png" />
+            </div>
+            <div class="col-lg-6">
+              <img class="w-100" src="./EgoImages/spa/a1.png" />
+            </div>
+            <div class="col-lg-6">
+              <img class="w-100" src="./EgoImages/spa/a1.png" />
+            </div>
+            <div class="col-lg-6">
+              <img class="w-100" src="./EgoImages/spa/a1.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-width py-5 my-5">
+        <p class="font-64">Khách hàng nói về chúng tôi</p>
+        <div class="row py-5 my-5 gy-4">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Phương Nam</div>
+                <div>Founder - CEO Evi English</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Trọng Giáp</div>
+                <div>Founder - CEO Esa English</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Phương Nam</div>
+                <div>Founder - CEO Evi English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="we-want max-width py-5">
+        <div class="row">
+          <div class="col-lg-7 col-12">
+            <div class="font-64">
+              Các bước hiện thực hóa mục tiêu kinh doanh của bạn
+            </div>
+          </div>
+        </div>
+        <div class="aproach d-flex pb-5">
+          <div class="aproach-list d-flex">
+            <div class="aproach-item">
+              <div class="title">Meeting</div>
+              <div class="desc">
+                Một cuộc họp khởi động là nền tảng để tất cả các bên thể hiện
+                thiện chí hợp tác và thiết lập tiến trình.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Sollution</div>
+              <div class="desc">
+                Sau các câu hỏi được đào sâu, chúng tôi có thể đã đưa ra được
+                giải pháp tổng quát cho vấn đề của doanh nghiệp bạn.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Brief</div>
+              <div class="desc">
+                Chúng tôi tóm lược toàn bộ thông tin dự án trong một tài liệu.
+                Đây là cơ sở dẫn lối cho cả hai bên trong suốt quá trình hợp tác
+                về sau.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Contract</div>
+              <div class="desc">
+                Trước khi chính thức hợp tác, mọi thông tin về thanh toán, phạm
+                vi dự án, các gói dịch vụ, khung thời gian,... sẽ được thống
+                nhất minh bạch trong hợp đồng.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Actions</div>
+              <div class="desc">
+                Cùng đội nhóm, chúng tôi bắt tay vào đưa ra những ý tưởng không
+                giới hạn. Sau cùng, những ý tưởng phù hợp nhất với “đề bài” sẽ
+                được chọn để chuẩn bị cho bước tiếp theo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-form py-5 max-width">
+        <div class="row">
+          <div class="col-lg-6 col-12 font-32">
+            Chúng tôi quan tâm đến dự án & doanh nghiệp của bạn
+          </div>
+          <div class="col-lg-1 col-12"></div>
+          <div class="col-lg-5 col-12">
+            <form class="">
+              <div class="mb-3">
+                <label for="name">Họ và tên</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="phone"> Số điện thoại liên hệ </label>
+                <input type="phone" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="position">Chức vụ</label>
+                <input type="text" class="form-control" id="position" />
+              </div>
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="company">Công ty</label>
+                <input type="text" class="form-control" id="company" />
+              </div>
+              <div class="mb-3">
+                <label for="job"> Ngành nghề kinh doanh </label>
+                <input type="text" class="form-control" id="job" />
+              </div>
+              <div class="mb-3">
+                <label for="solution"> Giải pháp quan tâm </label>
+                <input type="text" class="form-control" id="solution" />
+              </div>
+              <div class="mt-4 text-center">
+                <input type="submit" class="button-primary" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script>
+      const swiperEl = document.querySelector(".swiperSeries");
+      Object.assign(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: true,
+        loop: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+      swiperEl.initialize();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi paint 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+
+    <style>
+      .section-banner {
+        height: 750px;
+        margin-top: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("./EgoImages/solution-2/banner-2.png");
+      }
+
+      .card-customer .image {
+        height: 130px;
+        width: 130px;
+      }
+
+      .card-customer img {
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .decor .fb {
+        width: 10%;
+        bottom: -8%;
+        left: 20%;
+      }
+
+      .decor .insta {
+        top: -7%;
+        right: 2%;
+        width: 7%;
+      }
+
+      .decor .tiktok {
+        width: 32%;
+        bottom: 28%;
+        left: 20%;
+      }
+
+      .decor .be {
+        width: 5%;
+        top: 26%;
+        left: 0;
+      }
+
+      .decor .linkin {
+        width: 6%;
+        bottom: 2%;
+        right: 8%;
+      }
+
+      .section-handle,
+      .sologan {
+        padding: 120px 0;
+      }
+
+      .card-project .image {
+        height: 400px;
+      }
+
+      .card-project img {
+        object-fit: cover;
+      }
+
+      /* we-want */
+
+      .we-want .heading {
+        color: #707070;
+        line-height: 120%;
+        margin-bottom: 4rem;
+      }
+
+      .aproach-list {
+        min-height: 400px;
+      }
+
+      .aproach .text-vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotateZ(180deg);
+        font-size: 98px;
+      }
+
+      .aproach-item {
+        margin: 0 10px;
+      }
+
+      .aproach-item .title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        color: var(--primary-color);
+        background: var(--white-color);
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .aproach-list .aproach-item:nth-child(1),
+      .aproach-list .aproach-item:nth-child(2),
+      .aproach-list .aproach-item:nth-child(3),
+      .aproach-list .aproach-item:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .aproach-list .aproach-item:nth-child(1) {
+        justify-content: end;
+      }
+
+      .aproach-list .aproach-item:nth-child(2),
+      .aproach-list .aproach-item:nth-child(3) {
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .aproach-list .aproach-item:nth-child(4) {
+        margin-top: 3rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        .section-banner {
+          height: 500px;
+        }
+
+        .decor {
+          display: none;
+        }
+
+        .section-handle {
+          padding: 80px 20px;
+        }
+
+        .sologan {
+          padding: 50px 0;
+        }
+
+        .card-project .image {
+          height: 300px;
+        }
+
+        /* we-want */
+        .we-want .heading,
+        .aproach .text-vertical {
+          font-size: 30px;
+        }
+
+        .aproach .text-vertical {
+          margin-right: 8rem;
+        }
+
+        .aproach-list {
+          flex-direction: column;
+        }
+
+        .aproach-list .aproach-item {
+          display: flex;
+          font-size: 12px;
+          margin-top: 0 !important;
+          flex-direction: row !important;
+        }
+
+        .aproach-item {
+          margin: 0 0 2rem 0;
+        }
+
+        .aproach-item .title {
+          font-size: 16px;
+          min-width: 95px;
+          height: 40px;
+          margin-right: 1rem;
+        }
+
+        .todo-list {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solution-2">
+      <section class="section-banner">
+        <div class="max-width h-100">
+          <div class="row h-100">
+            <div class="col-lg-6 col-12">
+              <p class="font-64">
+                Giải pháp tối ưu các nền tảng truyền thông sở hữu
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-effective py-5 my-5 max-width">
+        <div class="row my-5">
+          <div class="col-lg-7 col-12">
+            <p class="font-32 fw-bolder">
+              4 loại tài sản số quan trọng của doanh nghiệp khi đầu tư vào kênh
+              truyền thông sở hữu
+            </p>
+            <div>
+              <p>01. Mức độ nhận diện</p>
+              <p>02. Nội dung & hình ảnh</p>
+              <p>03. Tệp khách hàng</p>
+              <p>04. Dữ liệu khách hàng</p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-12"></div>
+          <div class="col-lg-6 col-12"></div>
+          <div class="col-lg-6 col-12 mt-5">
+            Là một doanh nghiệp trẻ, chúng tôi hiểu được tầm quan trọng của
+            marketing trong hoạt động kinh doanh của doanh nghiệp. Tuy nhiên để
+            vận hành một phòng marketing với đầy đủ chức năng đòi hỏi một chi
+            phí tốn kém, chưa kể đến những khó khăn trong việc tuyển dụng và
+            quản trị nhân sự, hiệu suất công việc không đảm bảo.
+          </div>
+        </div>
+      </section>
+
+      <section class="section-suitable bg-white color-black py-5 relative">
+        <div class="decor">
+          <img class="fb absolute" src="./EgoImages/solution-2/facebook.png" />
+          <img
+            class="insta absolute"
+            src="./EgoImages/solution-2/instagram.png"
+          />
+          <img
+            class="tiktok absolute"
+            src="./EgoImages/solution-2/titkok.png"
+          />
+          <img class="be absolute" src="./EgoImages/solution-2/be.png" />
+          <img
+            class="linkin absolute"
+            src="./EgoImages/solution-2/linkin.png"
+          />
+        </div>
+        <div class="max-width py-5">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <p class="font-64 fw-semibold primary-color">
+                Giải pháp này chắc chắn phù hợp với doanh nghiệp nếu:
+              </p>
+            </div>
+            <div class="col-lg-1 col-12"></div>
+            <div class="col-lg-5 col-12">
+              <div class="fs-5">
+                <p class="mb-4">
+                  Doanh nghiệp có mục tiêu xây dựng nhiều kênh truyền thông sở
+                  hữu nhưng chưa biết nên tập trung vào phát triển kênh nào ?
+                  Kênh nào tiềm năng tạo ra chuyên đổi doanh thu?
+                </p>
+                <p class="mb-4">
+                  Doanh nghiệp đang phụ thuộc vào thuật toán nền tảng. Không tạo
+                  ra chuyển đổi dù chi phí đầu tư - chi phí duy trì cao
+                </p>
+                <p class="mb-4">
+                  Các kênh sở hữu hiện tại thiếu đồng bộ - rời rạc - giảm hiệu
+                  quả chuyên đổi tổng thể
+                </p>
+                <p class="mb-4">
+                  Doanh nghiệp không đo lường / đánh giá được hiệu quả giữa các
+                  kênh. Không có dữ liệu doanh nghiệp
+                </p>
+                <p class="mb-4">
+                  Doanh nghiệp đang mơ hồ về chiến lược nội dung - thời điểm
+                  chuyển đổi - tối ưu chi phí & lỏng lẻo quản lý tài sản số của
+                  doanh nghiệp
+                </p>
+                <p>
+                  Thiếu nhân lực định hướng nội dung, hình ảnh, sản xuất tư liệu
+                  số chuyên nghiệp trên nền tảng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-handle max-width">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <p class="font-64 fw-bolder mb-5">
+              Giải quyết giúp doanh nghiệp 3 bài toán
+            </p>
+          </div>
+        </div>
+        <div class="row gx-5">
+          <div class="col-lg-3 col-12">
+            <div class="">
+              <div class="font-120">01</div>
+              <p class="mb-4 fs-5">Nắm rõ chất lượng từng kênh sở hữu</p>
+              <p>
+                Có cơ sở đầu tư kênh sở hữu hiệu quả, cắt giảm chi phí cho các
+                kênh kém hiệu quả hoặc có phương án cải thiện các kênh nằm trong
+                mục tiêu nhưng kết quả chưa đạt.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-1 col-12"></div>
+
+          <div class="col-lg-3 col-12">
+            <div class="">
+              <div class="font-120">02</div>
+              <p class="mb-4 fs-5">Chiến lược tối ưu</p>
+              <p>
+                Nội dung
+                <br />
+                Liên kết
+                <br />
+                Chỉ số
+                <br />
+                Chi phí
+                <br />
+                <br />
+                Tạo ra hiệu quả bền vững & Gia tăng tài sản số doanh nghiệp
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-1 col-12"></div>
+          <div class="col-lg-3 col-12">
+            <div class="">
+              <div class="font-120">03</div>
+              <p class="mb-4 fs-5">Quản lý hiệu quả</p>
+              <p>
+                Thực thi nội dung & hình ảnh phù hợp với thuật toán nền tảng
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sologan">
+          <img class="w-100" src="./EgoImages/solution-2/banner-social.png" />
+        </div>
+
+        <div class="py-5">
+          <p class="font-64">Bằng 5 bước chi tiết</p>
+          <div class="row">
+            <div class="col-lg-5 col-12">
+              Các kênh sở hữu liên quan trực tiếp đến tài sản doanh nghiệp. Để
+              cả hai bên đạt được mục tiêu , chúng tôi sẽ tiến hành 5 bước trên
+              khi được sự đông ý truy cập dữ liệu của doanh nghiệp tại thời điểm
+              hiện tại.
+            </div>
+          </div>
+          <div class="pt-5">
+            <img class="w-100" src="./EgoImages/solution-2/step.png" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-project max-width">
+        <p class="font-64 mb-5">Những dự án tâm huyết</p>
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <div class="card-project mb-4">
+              <div class="mb-4 image">
+                <img class="w-100 h-100" src="./EgoImages/spa/a1.png" />
+              </div>
+              <div>Tictop</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="card-project mb-4">
+              <div class="mb-4 image">
+                <img class="w-100 h-100" src="./EgoImages/spa/a1.png" />
+              </div>
+              <div>Simple- tối ưu fanpage</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="card-project mb-4">
+              <div class="mb-4 image">
+                <img class="w-100 h-100" src="./EgoImages/spa/a1.png" />
+              </div>
+              <div>Sơn Hà Nội</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-width py-5 my-5">
+        <p class="font-64">Khách hàng nói về chúng tôi</p>
+        <div class="row py-5 my-5 gy-4">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Phương Nam</div>
+                <div>Founder - CEO Evi English</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Trọng Giáp</div>
+                <div>Founder - CEO Esa English</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card-customer d-flex gap-4 align-items-center">
+              <div class="image">
+                <img
+                  class="w-100 h-100"
+                  src="./EgoImages/solution-4/banner-4.png"
+                />
+              </div>
+              <div class="info">
+                <div>Mr Phương Nam</div>
+                <div>Founder - CEO Evi English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="we-want max-width py-5">
+        <div class="row">
+          <div class="col-lg-7 col-12">
+            <div class="font-64">
+              Các bước hiện thực hóa mục tiêu kinh doanh của bạn
+            </div>
+          </div>
+        </div>
+        <div class="aproach d-flex pb-5">
+          <div class="aproach-list d-flex">
+            <div class="aproach-item">
+              <div class="title">Meeting</div>
+              <div class="desc">
+                Một cuộc họp khởi động là nền tảng để tất cả các bên thể hiện
+                thiện chí hợp tác và thiết lập tiến trình.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Sollution</div>
+              <div class="desc">
+                Sau các câu hỏi được đào sâu, chúng tôi có thể đã đưa ra được
+                giải pháp tổng quát cho vấn đề của doanh nghiệp bạn.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Brief</div>
+              <div class="desc">
+                Chúng tôi tóm lược toàn bộ thông tin dự án trong một tài liệu.
+                Đây là cơ sở dẫn lối cho cả hai bên trong suốt quá trình hợp tác
+                về sau.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Contract</div>
+              <div class="desc">
+                Trước khi chính thức hợp tác, mọi thông tin về thanh toán, phạm
+                vi dự án, các gói dịch vụ, khung thời gian,... sẽ được thống
+                nhất minh bạch trong hợp đồng.
+              </div>
+            </div>
+            <div class="aproach-item">
+              <div class="title">Actions</div>
+              <div class="desc">
+                Cùng đội nhóm, chúng tôi bắt tay vào đưa ra những ý tưởng không
+                giới hạn. Sau cùng, những ý tưởng phù hợp nhất với “đề bài” sẽ
+                được chọn để chuẩn bị cho bước tiếp theo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-form py-5 max-width">
+        <div class="row">
+          <div class="col-lg-6 col-12 font-32">
+            Chúng tôi quan tâm đến dự án & doanh nghiệp của bạn
+          </div>
+          <div class="col-lg-1 col-12"></div>
+          <div class="col-lg-5 col-12">
+            <form class="">
+              <div class="mb-3">
+                <label for="name">Họ và tên</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="phone"> Số điện thoại liên hệ </label>
+                <input type="phone" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="position">Chức vụ</label>
+                <input type="text" class="form-control" id="position" />
+              </div>
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="company">Công ty</label>
+                <input type="text" class="form-control" id="company" />
+              </div>
+              <div class="mb-3">
+                <label for="job"> Ngành nghề kinh doanh </label>
+                <input type="text" class="form-control" id="job" />
+              </div>
+              <div class="mb-3">
+                <label for="solution"> Giải pháp quan tâm </label>
+                <input type="text" class="form-control" id="solution" />
+              </div>
+              <div class="mt-4 text-center">
+                <input type="submit" class="button-primary" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
